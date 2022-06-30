@@ -1,0 +1,50 @@
+{
+  "name": "semaphore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node node_modules/jest/bin/jest.js",
+    "build": "tsc -p tsconfig.json",
+    "doc": "typedoc",
+    "prepare": "npm run build && npm run doc",
+    "watch": "tsc -p tsconfig.json --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dyst5422/semaphore.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dyst5422/semaphore/issues"
+  },
+  "homepage": "https://github.com/dyst5422/semaphore#readme",
+  "dependencies": {
+    "@jest/types": "^28.1.1",
+    "jest": "^28.1.2",
+    "ts-jest": "^28.0.5",
+    "typedoc": "^0.23.2",
+    "typescript": "^4.7.4"
+  },
+  "jest": {
+    "preset": "ts-jest/presets/default-esm",
+    "testEnvironment": "node",
+    "transform": {},
+    "globals": {
+      "ts-jest": {
+        "useESM": true
+      }
+    },
+    "moduleNameMapper": {
+      "^(\\.{1,2}/.*)\\.js$": "$1"
+    },
+    "extensionsToTreatAsEsm": [
+      ".ts"
+    ],
+    "testMatch": [
+      "**/__tests__/**/*.test.ts",
+      "**/?(*.)+(spec|test).ts"
+    ]
+  }
+}
